@@ -1,1 +1,1 @@
-# SpottedChatBOT
+# iBOT
