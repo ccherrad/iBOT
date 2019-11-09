@@ -1,0 +1,17 @@
+{% extends "admin/change_list.html" %} {% load i18n %} 
+{% block object-tools-items %}
+{%load static%}
+    <script src="{% static 'js/fblogin.js' %}"></script> 
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+    {{ block.super }}
+    <li>
+      <fb:login-button 
+      scope="public_profile,email,manage_pages,publish_pages,pages_messaging"
+      onlogin="checkLoginState();">
+      ADD PAGE
+      </fb:login-button>
+    </li>
+{% endblock %}
